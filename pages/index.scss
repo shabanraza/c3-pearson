@@ -1,0 +1,58 @@
+@import 'normalize.css';
+@import '../base-style/c3.scss';
+$brand-color: #004f68;
+$btn-disabled-color: #6a6a6a;
+$btn-disabled-bg-color: #ececec;
+$btn-disabled-shadow-color: #bdbdbd;
+$btn-hover-color: #187d97;
+$btn-shadow-color: #005067;
+$font-color:#007FA3;
+$font-size:14px;
+$font-sizeText:18px;
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+
+
+.c3__header{
+    font-size: 36px;
+    background: white;
+    color: $font-color;
+    font-weight: 300;
+    padding: 50px 20px 20px 20px;
+}
+
+.c3-main {
+    margin: 0 auto;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.c3-button {
+    width: 218px;
+    height: 42px;
+    border-radius: 3px;
+    margin: 1px;
+    background-color: $brand-color;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        text-decoration: none;
+        background-color: $btn-hover-color;
+        box-shadow: 0 2px 0 0 $btn-shadow-color;
+        color: #fefefe;
+    }
+    &:disabled {
+        background-color: $btn-disabled-bg-color;
+        box-shadow: 0 2px 0 0 $btn-disabled-shadow-color;
+        color: $btn-disabled-color;
+        cursor: not-allowed;
+    }
+}
+
