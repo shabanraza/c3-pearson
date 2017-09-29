@@ -1,6 +1,8 @@
 import React from "react";
 import Header from './components/Header';
 import User from './components/User';
+import UserForm from './components/UserForm';
+
 export default class C3 extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -57,24 +59,29 @@ export default class C3 extends React.PureComponent {
 
   componentDidMount() {}
 
-  addUser(newUser) {
-    // phase 2 implement
-    this.setState({
-      users: [...this.state.users, newUser]
-    });
+  addUser(newUser) {  console.log("new user"+JSON.stringify(newUser))
+    // // phase 2 implement
+    // this.setState({
+    //   users: [...this.state.users, newUser]
+    // });
   }
 
   render() {
     return (
-      <main className="c3-main">
+      <main className="c3__main">
         <Header />
+        <div className="c3__container">
           { this.state.users.map((user)=>
-             
-             <User
+            <User
+              key={user.id}
               user={user}
+              
             /> 
-          ) }
-        
+          )}
+        </div>
+        <UserForm 
+          addUser={this.addUser}
+        />
       </main>
     );
   }

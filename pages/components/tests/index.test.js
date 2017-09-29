@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import Index from "./index";
+import Index from "./../../index";
 describe("Index", () => {
   afterEach(function() {
     sinon.restore();

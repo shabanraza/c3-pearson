@@ -25,13 +25,60 @@ $font-sizeText:18px;
     padding: 50px 20px 20px 20px;
 }
 
-.c3-main {
+.c3__main {
     margin: 0 auto;
     max-width: 940px;
     margin: 0 auto;
-}
+    display:flex;
+    flex-direction:column;
+    background:#d8d8d8;
+    .c3__container {
+        display:flex;
+        margin:37px;
+        flex-wrap: wrap;
 
-.c3-button {
+        justify-content:center;
+        
+    }
+    
+}
+.c3__user{
+    margin:37px;
+    background:white;
+    text-align:center;
+    width:212px;
+    height:212px;
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    
+   
+    
+   .c3__img {
+      width:80px;
+      height:80px;
+      border-radius:50%;
+      position:relative;
+      left:28%;
+      bottom:20%;
+    }
+    
+    .c3__delete{
+      text-align:left;
+      margin:10px;
+      font-size:$font-size;
+      color:$font-color;
+      text-decoration:none;
+      margin-top: 80px;
+      cursor:pointer;
+    }
+    
+   .c3__title{
+      font-size:$font-sizeText;
+      color:#e93939;
+   }
+}
+.c3__button {
     width: 218px;
     height: 42px;
     border-radius: 3px;
@@ -55,4 +102,48 @@ $font-sizeText:18px;
         cursor: not-allowed;
     }
 }
+
+.c3__userform{   
+       background: white;
+
+.c3__Form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 20px 20px 20px;
+    
+    
+    
+    .c3__label{
+      font-size:$font-size;
+      color:$font-color;
+      margin-bottom:12px;
+       margin-top: 12px;
+    }
+    
+    .c3__input{
+      font-size:16px;
+      border:1px solid #979797;
+      width:323px;
+      height:33px;
+      border-radius: 50px;
+      
+      
+    }
+   
+    
+    .c3__btn {
+        font-size:$font-sizeText;
+        background-color:$font-color;
+      color:white;
+      width:149px;
+      height:44px;
+      margin-top:22px;
+      text-align: center;
+      border-radius:50px;
+
+
+    }
+  }
+}
+
 

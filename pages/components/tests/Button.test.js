@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import Button from "./Button";
+import Button from "./../Button";
 describe("Button", () => {
   it("should render Button and handle onClick", () => {
     const onClickSpy = sinon.spy();

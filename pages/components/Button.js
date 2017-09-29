@@ -1,5 +1,20 @@
 export default (props) => {
+
+    const {
+        className,
+        onClick,
+        text
+
+    } = props;
+
+
+
     return (
-        <button className="c3-button" {...props}></button>
+        <button 
+            className={className} 
+            onClick={onClick}>
+            
+            {text}
+        </button>
     )
 }

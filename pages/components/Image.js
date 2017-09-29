@@ -1,6 +1,10 @@
 export default (props) => {
-	console.log(props)
+    const {
+        user
+    } = props;
+
+console.log(props.avatar)
     return (
-        <img src={props.user.avatar} className="c3__img"  />
+        <img src={user.avatar} className="c3__img"  />
     )
 }
