@@ -11,8 +11,7 @@ describe("Index", () => {
     // you can console.log(component.html()) to see the html of a given component or console.log(component.text()) to see text
 
     const component = shallow(<Index />);
-    expect(component.hasClass("c3-main")).to.eql(true);
-    expect(component.find("h1").text()).to.eql("C3 - User Management");
+    expect(component.hasClass("c3__main")).to.eql(true);
   });
 
   it("Should handle clicks for addUser", () => {

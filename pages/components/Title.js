@@ -1,1 +1,9 @@
-export default  (props) => <h5 className="c3__title">{props.user.first_name}{props.user.last_name}</h5>;
+export default  (props) => {
+
+	const { 
+		className, 
+		text
+	} = props;
+
+	return <h5 className={className}>{text}</h5>
+}

@@ -14,9 +14,7 @@ export default class UserForm extends React.PureComponent {
 			lname:''
 		}
 	}
-	handleChange (e) {
-		console.log(this.state)
-	}
+	
 
 	render(){
 		const { addUser } = this.props;
@@ -44,7 +42,7 @@ export default class UserForm extends React.PureComponent {
 					<Input
 						type="text"
 						value={this.state.lname}
-						id="fname"
+						id="lname"
 						name="firstname"
 						className="c3__input"
 						onChange={(e)=>{this.setState({lname:e.target.value})}}

@@ -66,6 +66,11 @@ export default class C3 extends React.PureComponent {
     // });
   }
 
+  deleteUser(id){
+
+  }
+
+
   render() {
     return (
       <main className="c3__main">
@@ -75,6 +80,7 @@ export default class C3 extends React.PureComponent {
             <User
               key={user.id}
               user={user}
+              onClick={this.deleteUser}
               
             /> 
           )}

@@ -1,12 +1,17 @@
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import Image from "./../Image";
 describe("Image", () => {
-	const url = 'https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg';
+
+
   it("should render Image tag ", () => {
-    const component = shallow(<Image src={url} />);
-    expect(component.exists()).eql(true);
-		expect(component.find('img')).to.have.attr('src');
+    
+    const component = shallow(<Image  className='c3__img' />);
+
+    expect(component.find('img')).to.be.present()
+
 		expect(component.find('img')).to.have.className('c3__img');
   
   });
+
+
 });
