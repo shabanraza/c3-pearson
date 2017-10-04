@@ -9,6 +9,6 @@ describe("Button", () => {
 
     component.find("button").simulate("click");
 
-    expect(onClickSpy.calledOnce).to.eql(true);
+    expect(onClickSpy.calledOnce).to.equal(true);
   });
 });

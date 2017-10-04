@@ -1,4 +1,4 @@
-import { shallow } from "enzyme";
+import { shallow,mount } from "enzyme";
 import Index from "./../../index";
 describe("Index", () => {
   afterEach(function() {
@@ -19,15 +19,24 @@ describe("Index", () => {
     // Here we are spying on a function within Index component
     const addUserSpy = sinon.spy(Index.prototype, "addUser");
     const stateSpy = sinon.spy(Index.prototype, "setState");
-    // here we mounting the component
-    const component = shallow(<Index />);
-    //  you can also simulate event such as 'click', 'keydown', 'mouseover', etc
-    component.find(".c3-button--addUser").simulate("click");
-    // or when multiple element share the same classname, use `at` which is array based: component.find(".c3-button").at(1).simulate("click");
+    const deleteUserSpy = sinon.spy(Index.prototype, "deleteUser");
 
-    // to expect a spy has been called, sinon provides a property on a spy to check if it has been called; spy.called
-    expect(addUserSpy.called).to.eql(true);
-    expect(stateSpy.called).to.eql(true);
+    // here we mounting the component
+    const component = mount(<Index />);
+    //  you can also simulate event such as 'click', 'keydown', 'mouseover', etc
+    // component.find(".c3__btn")[0].simulate("click");
+    // console.log(component.find(".c3__btn")[0].html())
+    // component.find(".c3__delete")[0].simulate("click");
+
+
+    // // or when multiple element share the same classname, use `at` which is array based: component.find(".c3-button").at(1).simulate("click");
+
+    // // to expect a spy has been called, sinon provides a property on a spy to check if it has been called; spy.called
+    // expect(addUserSpy.calledOnce).to.equal(true);
+    // expect(stateSpy.calledOnce).to.equal(true);
+    // expect(deleteUserSpy.calledOnce).to.equal(true);
+
+
   });
 
 });

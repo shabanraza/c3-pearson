@@ -59,14 +59,23 @@ export default class C3 extends React.PureComponent {
 
   componentDidMount() {}
 
-  addUser(newUser) {  console.log("new user"+JSON.stringify(newUser))
-    // // phase 2 implement
-    // this.setState({
-    //   users: [...this.state.users, newUser]
-    // });
+  addUser(newUser) {  
+    let oldUser = [...this.state.users];
+    oldUser.push({
+      id:Math.floor(Math.random() * 100),
+      first_name: newUser.fname,
+      last_name: newUser.lname,
+      avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/bigmancho/128.jpg"
+
+    })
+    this.setState({users:oldUser});
   }
 
   deleteUser(id){
+      let arr = [...this.state.users];
+    	const index = arr.findIndex((item)=> item.id === id);
+			arr.splice(index,1);
+      this.setState({users:arr});
 
   }
 
@@ -80,8 +89,7 @@ export default class C3 extends React.PureComponent {
             <User
               key={user.id}
               user={user}
-              onClick={this.deleteUser}
-              
+              onClick={()=>this.deleteUser(user.id)}
             /> 
           )}
         </div>
