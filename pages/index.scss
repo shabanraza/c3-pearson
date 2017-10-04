@@ -37,7 +37,7 @@ $font-sizeText:18px;
         margin:37px;
         flex-wrap: wrap;
 
-        justify-content:center;
+        justify-content:flex-start;
         
     }
     
@@ -127,6 +127,10 @@ $font-sizeText:18px;
       width:323px;
       height:33px;
       border-radius: 50px;
+      padding-left: 17px;
+      &:focus{
+        border-radius:0; 
+      }
       
       
     }
